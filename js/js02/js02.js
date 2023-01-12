@@ -118,3 +118,20 @@ function factorialConRecursion(a){
 }
 
 console.log("factorial 3 = " + factorialConRecursion(6));
+
+// Hacer una recursion que muestre en consola un saludo como
+/*
+saludo 1
+saludo 2
+saludo 3 ...10
+
+saludo(10);
+*/
+function recursionSaludo(cantidad, iteracion=1){
+    console.log("saludo " + iteracion);
+    if(iteracion>= cantidad)
+    return 1;
+    return recursionSaludo(cantidad, iteracion + 1);
+}
+recursionSaludo(10);
+
