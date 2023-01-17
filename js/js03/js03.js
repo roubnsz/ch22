@@ -180,6 +180,7 @@ switch(mes){
 console.log(`El numero ingresado ${mes} pertenece a la estacion ${estacionAño}`);
 
 
+
 let seleccionMes = 15;//parseInt(prompt('Inserta un numero del 1 - 12'))
 let estacionDelAño;
 
@@ -190,3 +191,22 @@ else if(seleccionMes === 9 || seleccionMes === 10 || seleccionMes === 11) estaci
 else estacionDelAño = 'N/A';
 
 console.log(`El numero ingresado ${seleccionMes} pertenece a la estacion ${estacionDelAño}`);
+
+
+//---------Refactorizando
+function factorial( number ){
+    if( number < 1) 
+        return 1;
+    return number * factorial( number - 1 )
+}
+console.log("Factorial 5 = " + factorial(5) ); //120
+
+//Factorizado
+
+function factorialTernario(number){
+    return number < 1 ? 1:
+    number * factorial(number - 1);
+}
+console.log(`Factorial 5 = ${factorialTernario(5)}`);
+
+
